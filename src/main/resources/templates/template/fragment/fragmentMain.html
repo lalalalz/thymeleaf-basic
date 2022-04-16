@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:insert="~{template/fragment/footer :: myFooter}"></div>
+<div th:insert="template/fragment/footer :: myFooter"></div>
+<div th:insert="~{template/fragment/footer :: myFooterWithParam('데이터1', '데이터2')}"></div>
+<div th:insert="template/fragment/footer :: myFooterWithParam('데이터1', '데이터2')"></div>
+
+<div th:replace="~{template/fragment/footer :: myFooter}"></div>
+<div th:replace="template/fragment/footer :: myFooter"></div>
+<div th:replace="~{template/fragment/footer :: myFooterWithParam('데이터1', '데이터2')}"></div>
+<div th:replace="template/fragment/footer :: myFooterWithParam('데이터1', '데이터2')"></div>
+
+
+</body>
+</html>

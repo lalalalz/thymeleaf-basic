@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<footer th:fragment="myFooter">
+
+    <span> 푸터 입니다. !! </span>
+
+</footer>
+
+<footer th:fragment="myFooterWithParam(param1, param2)">
+
+    <span> 파라미터를 포함한 푸터 입니다. !! </span>
+    <p th:text="${param1}"></p>
+    <p th:text="${param2}"></p>
+
+</footer>
+
+</body>
+</html>

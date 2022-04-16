@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <li>점 표기법: <span th:text="${userList[0].username}"></span></li>
+    <li>점 표기법: <span th:text="${userList[0].age}"></span></li>
+    <li>괄호 표기법: <span th:text="${userList[1]['username']}"></span></li>
+    <li>괄호 표기법: <span th:text="${userList[1]['age']}"></span></li>
+    <li>Getter 표기법: <span th:text="${userList[0].getUsername()}"></span></li>
+    <li>Getter 표기법: <span th:text="${userList[1].getAge()}"></span></li>
+</body>
+</html>

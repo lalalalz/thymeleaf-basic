@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>기본 객체</h2>
+
+    <li>HttpServletRequest: <span th:text="${#request}"></span></li>
+    <li>HttpServletResponse: <span th:text="${#response}"></span></li>
+    <li>HttpServletContext: <span th:text="${#servletContext}"></span></li>
+
+
+    <h2>편의 객체</h2>
+
+    <li>요청 파라미터: <span th:text="${param}"></span></li>
+    <li>세션: <span th:text="${session}"></span></li>
+    <li>Locale: <span th:text="${#locale}"></span></li>
+
+    <h2>빈 객체</h2>
+    <li>스프링 빈: <span th:text="${@helloBean.hello('spring!')}"></span></li>
+
+</body>
+</html>

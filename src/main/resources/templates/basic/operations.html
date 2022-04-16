@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<li> 1 +  10 = <span th:text="1 + 10"></span></li>
+<li> 1 -  10 = <span th:text="1 - 10"></span></li>
+<li> 1 *  10 = <span th:text="1 * 10"></span></li>
+<li> 1 /  10 = <span th:text="1 / 10"></span></li>
+
+<li> 1 >    10 = <span th:text="1 >    10"></span></li>
+<li> 1 gt   10 = <span th:text="1 gt   10"></span></li>
+<li> 1 &gt; 10 = <span th:text="1 &gt; 10"></span></li>
+
+<li> 1 <    10 = <span th:text="1 <    10"></span></li>
+<li> 1 lt   10 = <span th:text="1 lt   10"></span></li>
+<li> 1 &lt; 10 = <span th:text="1 &lt; 10"></span></li>
+
+<li> 1 >=   10 = <span th:text="1 >=     10"></span></li>
+<li> 1 ge   10 = <span th:text="1 ge     10"></span></li>
+<!--th:text에서 HTML에서 제공하는 엔티티를 사용할 수 없다.-->
+<!--<li> 1 &ge; 10 = <span th:text="1 &ge;   10"></span></li>-->
+
+<li> 1 <=   10 = <span th:text="1 >=   10"></span></li>
+<li> 1 le   10 = <span th:text="1 le   10"></span></li>
+<!--th:text에서 HTML에서 제공하는 엔티티를 사용할 수 없다.-->
+<!--<li> 1 &le; 10 = <span th:text="1 &le; 10"></span></li>-->
+
+<li> 1 ==   10 = <span th:text="1 ==   10"></span></li>
+<li> 1 eq   10 = <span th:text="1 eq   10"></span></li>
+
+<li> 1 !=   10 = <span th:text="1 !=   10"></span></li>
+<li> 1 ne 1  0 = <span th:text="1 ne   10"></span></li>
+
+<!--기본 연산자-->
+<li> (10 % 2) == 0 ? '짝수' : '홀수' = <span th:text="(10 % 2) == 0 ? '짝수' : '홀수'"></span></li>
+
+<!--엘비스 연산자-->
+<li> ${data} ?: '데이터가 없습니다.' =  <span th:text="${data}?: '데이터가 없습니다.'"></span></li>
+<li> ${nullData} ?: '데이터가 없습니다.' = <span th:text="${nullData} ?: '데이터가 없습니다.'"></span></li>
+
+<!--No-Operation-->
+<li> ${nullData} ?: _ = <span th:text="${nullData} ?: '데이터가 없습니다.'"></span></li>
+
+
+</body>
+</html>
